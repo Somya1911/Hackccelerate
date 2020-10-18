@@ -1,0 +1,93 @@
+Flutter crash report.
+Please report a bug at https://github.com/flutter/flutter/issues.
+
+## command
+
+flutter run
+
+## exception
+
+NoSuchMethodError: NoSuchMethodError: The method 'group' was called on null.
+Receiver: null
+Tried calling: group(1)
+
+```
+#0      Object.noSuchMethod (dart:core-patch/object_patch.dart:51:5)
+#1      licenseNotAcceptedHandler.<anonymous closure> (package:flutter_tools/src/android/gradle_errors.dart:269:23)
+#2      buildGradleApp (package:flutter_tools/src/android/gradle.dart:416:73)
+#3      _rootRunUnary (dart:async/zone.dart:1198:47)
+#4      _CustomZone.runUnary (dart:async/zone.dart:1100:19)
+#5      _FutureListener.handleValue (dart:async/future_impl.dart:143:18)
+#6      Future._propagateToListeners.handleValueCallback (dart:async/future_impl.dart:696:45)
+#7      Future._propagateToListeners (dart:async/future_impl.dart:725:32)
+#8      Future._completeWithValue (dart:async/future_impl.dart:529:5)
+#9      _AsyncAwaitCompleter.complete (dart:async-patch/async_patch.dart:40:15)
+#10     _completeOnAsyncReturn (dart:async-patch/async_patch.dart:311:13)
+#11     _DefaultProcessUtils.stream (package:flutter_tools/src/base/process.dart)
+#12     _rootRunUnary (dart:async/zone.dart:1198:47)
+#13     _CustomZone.runUnary (dart:async/zone.dart:1100:19)
+#14     _FutureListener.handleValue (dart:async/future_impl.dart:143:18)
+#15     Future._propagateToListeners.handleValueCallback (dart:async/future_impl.dart:696:45)
+#16     Future._propagateToListeners (dart:async/future_impl.dart:725:32)
+#17     Future._completeWithValue (dart:async/future_impl.dart:529:5)
+#18     Future._asyncCompleteWithValue.<anonymous closure> (dart:async/future_impl.dart:567:7)
+#19     _rootRun (dart:async/zone.dart:1190:13)
+#20     _CustomZone.run (dart:async/zone.dart:1093:19)
+#21     _CustomZone.runGuarded (dart:async/zone.dart:997:7)
+#22     _CustomZone.bindCallbackGuarded.<anonymous closure> (dart:async/zone.dart:1037:23)
+#23     _microtaskLoop (dart:async/schedule_microtask.dart:41:21)
+#24     _startMicrotaskLoop (dart:async/schedule_microtask.dart:50:5)
+#25     _runPendingImmediateCallback (dart:isolate-patch/isolate_patch.dart:118:13)
+#26     _RawReceivePortImpl._handleMessage (dart:isolate-patch/isolate_patch.dart:169:5)
+```
+
+## flutter doctor
+
+```
+[✓] Flutter (Channel master, 1.23.0-19.0.pre.85, on Mac OS X 10.15.7 19H2 darwin-x64, locale en-IN)
+    • Flutter version 1.23.0-19.0.pre.85 at /Users/somyakhatri/Developer/flutter
+    • Framework revision c0176c9ee5 (12 hours ago), 2020-10-16 20:20:00 +0200
+    • Engine revision 5355f270ba
+    • Dart version 2.11.0 (build 2.11.0-228.0.dev)
+
+[!] Android toolchain - develop for Android devices
+    • Android SDK at /usr/local/Caskroom/android-platform-tools/30.0.0
+    ✗ Unable to locate Android SDK.
+      Install Android Studio from: https://developer.android.com/studio/index.html
+      On first launch it will assist you in installing the Android SDK components.
+      (or visit https://flutter.dev/docs/get-started/install/macos#android-setup for detailed instructions).
+      If the Android SDK has been installed to a custom location, please use
+      `flutter config --android-sdk` to update to that location.
+
+    • ANDROID_HOME = /Users/somyakhatri/Library/android-sdk
+    ✗ No valid Android SDK platforms found in /usr/local/Caskroom/android-platform-tools/30.0.0/platforms.
+      Directory was empty.
+    • Try re-installing or updating your Android SDK,
+      visit https://flutter.dev/docs/get-started/install/macos#android-setup for detailed instructions.
+
+[✓] Xcode - develop for iOS and macOS (Xcode 11.7)
+    • Xcode at /Applications/Xcode.app/Contents/Developer
+    • Xcode 11.7, Build version 11E801a
+    • CocoaPods version 1.9.1
+
+[✓] Chrome - develop for the web
+    • Chrome at /Applications/Google Chrome.app/Contents/MacOS/Google Chrome
+
+[✓] Android Studio (version 4.0)
+    • Android Studio at /Applications/Android Studio.app/Contents
+    • Flutter plugin version 50.0.1
+    • Dart plugin version 193.7547
+    • Java version OpenJDK Runtime Environment (build 1.8.0_242-release-1644-b3-6222593)
+
+[✓] Connected device (4 available)
+    • GM1911 (mobile)                     • 192.168.1.13:5555                    • android-arm64  • Android 10
+      (API 29)
+    • iPhone SE (2nd generation) (mobile) • D3F73C33-073E-43D2-9F41-2729DF31594E • ios            •
+      com.apple.CoreSimulator.SimRuntime.iOS-13-7 (simulator)
+    • Web Server (web)                    • web-server                           • web-javascript • Flutter
+      Tools
+    • Chrome (web)                        • chrome                               • web-javascript • Google
+      Chrome 86.0.4240.80
+
+! Doctor found issues in 1 category.
+```
