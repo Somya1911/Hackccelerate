@@ -1,4 +1,4 @@
-# calculateur_de_calories
+Calories Calculator
 
 A new Flutter application.
 
